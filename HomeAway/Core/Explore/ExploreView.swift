@@ -13,15 +13,21 @@ struct ExploreView: View {
             ScrollView {
                 SearchAndFilterBar()
                 LazyVStack(spacing:30) {
-                    ForEach(0...10,id: \.self){listings in
-                        ListingItemView()
-                            .frame(height: 380)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    ForEach(0...10,id: \.self){listing in
+                        NavigationLink(value: listing, label: {
+                            ListingItemView()
+                                .frame(height: 380)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        })
                     }
                 }
                 .padding()
                 
             }.scrollIndicators(.hidden)
+            .navigationDestination(for: Int.self){listing in
+                    ListingDetailView()
+                        .navigationBarHidden(true)
+                }
         }
     }
 }
