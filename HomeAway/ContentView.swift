@@ -15,12 +15,7 @@ struct ContentView: View {
                 SplashScreen()
                     .transition(CustomTransition(isHome: false))
             } else {
-                VStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, world!")
-                }
+              ExploreView()
                 .transition(CustomTransition(isHome: true))
                 .padding()
             }
