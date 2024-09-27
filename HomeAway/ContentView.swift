@@ -17,7 +17,7 @@ struct ContentView: View {
             } else {
               ExploreView()
                 .transition(CustomTransition(isHome: true))
-                .padding()
+                
             }
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)

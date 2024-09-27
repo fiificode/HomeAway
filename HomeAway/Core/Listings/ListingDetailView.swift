@@ -13,7 +13,6 @@ struct ListingDetailView: View {
         "Listing-1",
         "Listing-2",
         "Listing-3",
-        "Listing-3",
         ]
     @Environment(\.dismiss) var dismiss
     
@@ -22,18 +21,17 @@ struct ListingDetailView: View {
             ZStack(alignment:.topLeading) {
                 ListingImageCarouselView()
                     .frame(height: 300)
-                
                 Button{
                     dismiss()
                 } label: {
                     Image(systemName: "chevron.left")
-                        .foregroundStyle(.appBlack)
+                        .foregroundStyle(.black)
                         .background{
                             Circle()
                                 .fill(.white)
                                 .frame(width: 32,height: 32)
-                        }
-                        .padding(32)
+                        }.padding(32)
+                        
                 }
             }
             
@@ -56,7 +54,7 @@ struct ListingDetailView: View {
                 }
                 .font(.caption)
             }
-            .padding()
+            .padding(.horizontal)
             .frame(maxWidth:.infinity,alignment: .leading)
             
             Divider()
@@ -129,7 +127,7 @@ struct ListingDetailView: View {
                                 .scaledToFill()
                                 .clipShape(RoundedRectangle(cornerRadius: 7))
                         }
-                    }.frame(width: 700)
+                    }.frame(width: 500)
                 }.scrollTargetBehavior(.paging)
             }.padding()
             
@@ -165,7 +163,7 @@ struct ListingDetailView: View {
             
         }
         .ignoresSafeArea()
-        .padding(.bottom,64)
+        .padding(.bottom,74)
         .scrollIndicators(.hidden)
         .overlay(alignment:.bottom){
                 VStack{

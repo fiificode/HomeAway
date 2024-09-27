@@ -21,7 +21,6 @@ struct ListingImageCarouselView: View {
                     .scaledToFill()
             }
         }
-        .shadow(color:.black,radius: 1.0)
         .tabViewStyle(.page)
     }
 }
