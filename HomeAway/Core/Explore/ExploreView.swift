@@ -29,6 +29,7 @@ struct ExploreView: View {
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                             })
                         }.padding()
+                         .fontWidth(.condensed)
                     }
                   
                     

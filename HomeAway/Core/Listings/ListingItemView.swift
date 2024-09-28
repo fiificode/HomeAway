@@ -34,7 +34,7 @@ struct ListingItemView: View {
                         Text("per night")
                             .foregroundStyle(.gray)
                     }
-                }
+                }.fontWidth(.condensed)
                 Spacer()
                 //ratings
                 HStack(spacing:3){

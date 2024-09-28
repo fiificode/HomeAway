@@ -55,6 +55,7 @@ struct ListingDetailView: View {
                 .font(.caption)
             }
             .padding(.horizontal)
+            .fontWidth(.condensed)
             .frame(maxWidth:.infinity,alignment: .leading)
             
             Divider()
@@ -64,7 +65,7 @@ struct ListingDetailView: View {
                 VStack(alignment:.leading,spacing: 8){
                     Text("Entire villa is hosted by Franklin Smith")
                         .font(.headline)
-                        .frame(width:250,alignment: .leading)
+                        .frame(width:200,alignment: .leading)
                         .fontWeight(.semibold)
                     HStack(spacing:2){
                         Text("4")
@@ -80,7 +81,7 @@ struct ListingDetailView: View {
                         Text("baths").foregroundStyle(.gray)
                     }.font(.caption)
                 }
-                .frame(width:300,alignment: .leading)
+                .frame(width:250,alignment: .leading)
             
                 Spacer()
                 
@@ -90,7 +91,7 @@ struct ListingDetailView: View {
                     .scaledToFit()
                     .frame(width:64,height: 64)
                     .clipShape(Circle())
-            }.padding()
+            }.padding().fontWidth(.condensed)
             
             Divider()
             
@@ -109,7 +110,7 @@ struct ListingDetailView: View {
                                 .foregroundStyle(.gray)
                         }
                         Spacer()
-                    }
+                    }.fontWidth(.condensed)
                 }
             }.padding()
             
@@ -119,6 +120,8 @@ struct ListingDetailView: View {
             VStack(alignment:.leading){
                 Text("Where you will be")
                     .font(.headline)
+                    .fontWeight(.semibold)
+                    .fontWidth(.condensed)
                 ScrollView(.horizontal,showsIndicators: false){
                     HStack(spacing:16){
                         ForEach(images,id:\.self){ image in
@@ -142,12 +145,12 @@ struct ListingDetailView: View {
                         Image(systemName: "wifi")
                             .frame(width:32)
                         Text("Wifi")
-                            .font(.footnote)
+                            .font(.caption)
                         
                         Spacer()
                     }
                 }
-            }.padding()
+            }.padding().fontWidth(.condensed)
             
             Divider()
             
