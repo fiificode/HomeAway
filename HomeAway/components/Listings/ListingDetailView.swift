@@ -165,6 +165,7 @@ struct ListingDetailView: View {
             
             
         }
+        .toolbar(.hidden,for : .tabBar)
         .ignoresSafeArea()
         .padding(.bottom,74)
         .scrollIndicators(.hidden)

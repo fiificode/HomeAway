@@ -15,7 +15,7 @@ struct ContentView: View {
                 SplashScreen()
                     .transition(CustomTransition(isHome: false))
             } else {
-              ExploreView()
+                MainTabView()
                 .transition(CustomTransition(isHome: true))
                 
             }
