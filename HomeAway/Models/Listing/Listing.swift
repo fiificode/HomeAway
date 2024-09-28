@@ -8,7 +8,7 @@
 import Foundation
 
 struct Listing: Identifiable, Codable {
-    let id: Int
+    let id: String
     let ownerId: String
     let ownerName: String
     let ownerAvatar: String
@@ -17,6 +17,7 @@ struct Listing: Identifiable, Codable {
     let numberOfBedrooms: Int
     let numberOfBeds: Int
     var pricePerNight: Int
+    var ImageUrls: [String]
     let latitude: Double
     let longitude: Double
     let address: String
@@ -67,6 +68,7 @@ enum ListingAmenities:Int,Codable, Identifiable, Hashable {
     case tv
     case pool
     case hotTub
+    case gym
     case airConditioning
     case washer
     case dryer
@@ -81,6 +83,7 @@ enum ListingAmenities:Int,Codable, Identifiable, Hashable {
         case .tv: return "TV"
         case .pool: return "Pool"
         case .hotTub: return "Hot Tub"
+        case .gym: return "Gym"
         case .airConditioning: return "Air Conditioning"
         case .washer: return "Washer"
         case .dryer: return "Dryer"
@@ -96,6 +99,7 @@ enum ListingAmenities:Int,Codable, Identifiable, Hashable {
             case .tv: return "tv"
             case .pool: return "pool"
             case .hotTub: return "hotTub"
+            case .gym: return "gym"
             case .airConditioning: return "airConditioning"
             case .washer: return "washer"
             case .dryer: return "dryer"
